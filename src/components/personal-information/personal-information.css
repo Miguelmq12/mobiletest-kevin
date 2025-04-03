@@ -352,8 +352,11 @@
 
 
 @media (max-width: 576px) {
-  .upload-container {
-    width: 95%;
+  .upload-box {
+    min-height: 270px;
+  }
+  .upload-container{
+    width: 80%;
   }
   .message {
     font-size: 1em;

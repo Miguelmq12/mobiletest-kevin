@@ -196,7 +196,7 @@ const PersonalInformation = () => {
             </div>
 
             <div className='separationLine'></div>
-<br></br>
+            <br></br>
             <div className="upload-container">
               <div className="tab-header">
                 <button

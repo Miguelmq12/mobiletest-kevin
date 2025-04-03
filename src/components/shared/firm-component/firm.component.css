@@ -1,11 +1,15 @@
 #signatureDiv {
-    cursor: pointer;
-    padding: 10px;
-    border: 2px solid#4472C4;
-    background-color: white;
-    text-align: center;
-    margin: 20px;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid #787878;
+  background-color: white;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   }
   
   #signatureDiv:hover {
@@ -14,7 +18,7 @@
   
   #signatureText {
     font-size: 16px;
-    color:#4472C4;
+    color:#787878;
   }
   
   #signatureImage {
@@ -26,9 +30,11 @@
     background-color: white;
   }
   #divimgCon {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0.6rem;
   }
   
   

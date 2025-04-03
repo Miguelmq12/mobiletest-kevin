@@ -78,14 +78,6 @@ const SignatureV2: React.FC = () => {
         <ContentBox content={getContentBoxContent()} />
       </div>
 
-      {/* <SignatureTabs
-        idTask={idTask!}
-        idTipoFirma={idTipoFirma}
-        valorFirma={valorFirma}
-        onTabChange={handleTabChange}
-        onSignatureChange={handleSignatureChange}
-      /> */}
-
       <FirmComponent/>
 
 

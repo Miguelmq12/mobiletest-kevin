@@ -14,8 +14,8 @@ const ContentBox: React.FC<ContentBoxProps> = ({ content }) => {
       width: '100%', 
       boxSizing: 'border-box', 
       textAlign:'start',
-      maxHeight: '400px',
-      marginBottom:'20px',
+      maxHeight: '590px',
+      marginBottom:'10px',
       overflowY:'auto'
     }}>
       {content}

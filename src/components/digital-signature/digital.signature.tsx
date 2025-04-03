@@ -11,7 +11,6 @@ import { useNavigate } from 'react-router-dom';
 import { FaHandPointer, FaPen, FaRegEdit, FaSignature } from 'react-icons/fa';  // Ícono de un dedo apuntando
 import BottomActions from '../shared/bottom-actions/bottom-actions';
 import ContentBox from '../shared/content-box/content-box';
-import PdfExample from '../prueba-pdf/prueba-pdf';
 
 type SignatureType = 'draw' | 'type';
 

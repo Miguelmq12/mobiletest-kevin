@@ -334,11 +334,13 @@
 .upload-box {
   padding: 20px;
   text-align: center;
-  border: 2px dashed #D3D3D3; 
+  border: 2px dashed #D3D3D3;
   border-radius: 8px;
   margin: 10px;
   background-color: white;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .upload-icon {
@@ -350,9 +352,6 @@
 .upload-box p {
   color: #808080;
 }
-
-
-
 
 .floating-icon-anim{
   display: flex;
@@ -419,8 +418,11 @@
 
 
 @media (max-width: 576px) {
+  .upload-box {
+    max-height: 150px;
+  }
   .upload-container{
-    width: 95%;
+    width: 85%;
   }
   .message {
     font-size: 1em;
