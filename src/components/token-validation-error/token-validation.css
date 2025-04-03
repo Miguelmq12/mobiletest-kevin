@@ -1,0 +1,58 @@
+/* src/components/token-validation.css */
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4472C4;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.error-content {
+  text-align: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+}
+
+.error-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.error-message {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .error-content {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .error-logo {
+    width: 120px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .error-message {
+    font-size: 1rem;
+  }
+}

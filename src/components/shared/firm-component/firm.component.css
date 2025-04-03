@@ -1,0 +1,34 @@
+#signatureDiv {
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid#4472C4;
+    background-color: white;
+    text-align: center;
+    margin: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #signatureDiv:hover {
+    background-color: #f0f0f0;
+  }
+  
+  #signatureText {
+    font-size: 16px;
+    color:#4472C4;
+  }
+  
+  #signatureImage {
+    max-width: 350px;
+    max-height: 150px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  #divimgCon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
