@@ -192,13 +192,6 @@ html, body {
   border-radius: 5px;
 }
 
-.button-group {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  width: 100%;
-  padding-bottom: 20px;
-}
 .button {
   background-color: white;
   color: #4285F4;
@@ -299,7 +292,7 @@ html, body {
   text-align: center;
 }
 
-.signature-options .button-group {
+.signature-options {
   display: flex;
   justify-content: space-between;
   gap: 15px;
@@ -372,8 +365,28 @@ html, body {
   background-color: #3367D6;
 }
 
+.button-group {
+  width: 33rem;
+}
+.divContextBox{
+  padding: 0.6rem;
+  width: 33rem;
+}
 
-@media (max-width: 576px) {
+@media only screen and (min-width: 1024px) {
+  .divContextBox{
+    padding: 0.6rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .button-group {
+    display: flex;
+  }
+}
+
+@media (max-width: 575.98px) {
+
   .title {
     display: none;
   }
@@ -410,9 +423,15 @@ html, body {
   .tab-container {
     gap: 10px;
   }
-}
-@media (min-width: 577px) {
-  .title {
-    display: block;
+
+  .button-group {
+    display: flex;
   }
+
+  .divContextBox{
+    padding: 0.6rem;
+    width: 100%;
+  }
+  
 }
+

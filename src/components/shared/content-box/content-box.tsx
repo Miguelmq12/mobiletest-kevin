@@ -1,25 +1,16 @@
 import React, { ReactNode } from 'react';
+import './content-box.css'; 
+
 interface ContentBoxProps {
   content: ReactNode;
 }
 
 const ContentBox: React.FC<ContentBoxProps> = ({ content }) => {
   return (
-    <div style={{
-      backgroundColor: 'white',
-      color: 'black',
-      padding: '20px',
-      borderRadius: '5px',
-      border: '1px solid #ccc', 
-      width: '100%', 
-      boxSizing: 'border-box', 
-      textAlign:'start',
-      maxHeight: '590px',
-      marginBottom:'10px',
-      overflowY:'auto'
-    }}>
+    <div className="content-box">
       {content}
     </div>
   );
 };
+
 export default ContentBox;

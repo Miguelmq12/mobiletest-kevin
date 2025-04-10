@@ -27,7 +27,7 @@ function App() {
         errorMessage: "",
         data: {
           idUser: 1,
-          name: "Miguel Martinez Quicaño",
+          name: "Kevin Sancho",
           jwtToken: "MASOINQ9MDOSIN01M0I9U2JSLKXM01"
         }
       };

@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent, MouseEvent } from 'react';
-import './personal-information.css';
+import styles  from './personal-information.module.css';
+import stylesglobal  from './personal-information.module.css';
 import {
   FaEye,
   FaEyeSlash,
@@ -157,7 +158,7 @@ const PersonalInformation = () => {
   };
 
   return (
-    <div className="container-generic" style={{marginBottom: showCamera ? '0px' : '70px', }} >
+    <div className={styles.container_generic} style={{marginBottom: showCamera ? '0px' : '70px', }} >
       <>
         {showCamera ? (
           <Capture onCapture={handleCapture} onClose={handleCloseCamera} />
@@ -196,7 +197,7 @@ const PersonalInformation = () => {
             </div>
 
             <div className='separationLine'></div>
-            <br></br>
+<br></br>
             <div className="upload-container">
               <div className="tab-header">
                 <button
@@ -216,7 +217,6 @@ const PersonalInformation = () => {
                 {activeTab2 === 'Opcion1' ? (
                   <>
                     {selectedImage ? (
-                      // Si hay una imagen seleccionada, la mostramos aquí
                       <img
                         src={selectedImage}
                         alt="Selected"
@@ -228,7 +228,6 @@ const PersonalInformation = () => {
                         }}
                       />
                     ) : (
-                      // Si no hay imagen seleccionada, mostramos el ícono de subir archivo
                       <>
                         <div className="upload-icon">
                           <FaFileUpload
@@ -292,11 +291,9 @@ const PersonalInformation = () => {
                 Submit
               </button>
             </div> */}
-
             <div className="button-group">
               <BottomActions onExit={handleExit} onSubmit={handleSubmit} />
             </div>
-
           </>
         )}
       </>

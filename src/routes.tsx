@@ -5,14 +5,15 @@ import Login from './components/login/login';
 import LoginPhone from './components/login-phone/login-phone';
 import Welcome from './components/welcome/welcome';
 import LandingPage from './components/landing-page/landing-page';
-import PersonalInformation from './components/personal-information/personal-information';
 import Signature from './components/digital-signature/digital.signature';
+import PersonalInformation from './components/personal-information/personal-information';
+import ConfirmText from './components/confirm-text/confirm-text';
 import Capture from './components/capture/capture';
 import { AuthContext } from './core/oautContext'; 
 import TokenValidationError from './components/token-validation-error/token-validation';
 import Layout from './components/layout/layout';
-import ConfirmText from './components/confirm-text/confirm-text';
 import WithHolding from './components/withholding/withholding';
+import I9 from './components/i9/i9';
 
 const RoutesComponent = () => {
   const authContext = useContext(AuthContext);
@@ -59,10 +60,11 @@ const RoutesComponent = () => {
         path="/w4-withholding"
         element={isAuthenticated ? <Layout title="W-4 Withholding"><WithHolding/></Layout> :<Navigate to="/" />}
       />
-      {/* <Route
-        path="/capture"
-        element={isAuthenticated ? <Capture /> : <Navigate to="/" />}
-      /> */}
+
+      <Route
+        path="/i9"
+        element={isAuthenticated ? <Layout title="I-9 Employment Eligibility"><I9/></Layout> :<Navigate to="/" />}
+      />
     </Routes>
   );
 };

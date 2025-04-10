@@ -6,6 +6,7 @@ import ContentBox from '../shared/content-box/content-box';
 import SignatureTabs from '../shared/tabs-signature/tabs-signature';
 import getHtmlContent from '../../template-html/html-content';
 import FirmComponent from '../shared/firm-component/firm.component';
+import InfoUser from '../shared/infor-user/info-user';
 
 
 
@@ -78,8 +79,17 @@ const SignatureV2: React.FC = () => {
         <ContentBox content={getContentBoxContent()} />
       </div>
 
+      {/* <SignatureTabs
+        idTask={idTask!}
+        idTipoFirma={idTipoFirma}
+        valorFirma={valorFirma}
+        onTabChange={handleTabChange}
+        onSignatureChange={handleSignatureChange}
+      /> */}
+
       <FirmComponent/>
 
+      <InfoUser name="Stephen Jones" date="11/21/2024" />
 
       <div className="button-group">
         <BottomActions onExit={handleClear} onSubmit={handleSave} />

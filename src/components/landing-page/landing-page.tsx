@@ -41,6 +41,9 @@ const LandingPage: React.FC = () => {
     else if(id==4){
       navigate('/digital-signature');
     }
+    else if(id==6){
+      navigate('/i9');
+    }
     else if(id==2||id==5||id==9){
       navigate('/confirm');
       if(id==2) localStorage.setItem('tittleTemp','Confidentiality Agrement');

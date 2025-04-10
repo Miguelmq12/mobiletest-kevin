@@ -1,0 +1,52 @@
+
+.content-box {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: start;
+  overflow-y: auto;
+}
+
+
+
+
+@media (max-width: 575.98px) {
+  .content-box {
+    height: 70vh;
+  }  
+}
+
+@media (min-width: 576px) {
+  .content-box {
+    height: 55vh;
+  }  
+}
+
+@media (min-width: 768px) {
+  .content-box {
+    height: 55vh;
+  }  
+}
+
+@media (min-width: 992px) {
+  .content-box {
+    height: 55vh;
+  }  
+}
+
+@media (min-width: 1200px) {
+  .content-box {
+    height: 55vh;
+  }  
+}
+
+
+@media (min-width: 1400px) {
+  .content-box {
+    height: 55vh;
+  }  
+}

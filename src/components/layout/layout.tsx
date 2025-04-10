@@ -6,6 +6,8 @@ interface LayoutProps {
   title: string; 
 }
 
+
+
 const Layout: React.FC<LayoutProps> = ({ children, title }) => {
   return (
     <div>
@@ -13,6 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title }) => {
       <div>
         {children}
       </div>
+
     </div>
   );
 };

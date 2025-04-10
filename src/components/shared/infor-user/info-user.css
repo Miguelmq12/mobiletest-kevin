@@ -1,0 +1,40 @@
+.info-user-container {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px; 
+  display: flex;
+  width: 33rem;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.info-user-name {
+  width: 70%;
+  text-align: left;
+
+}
+
+.info-user-date {
+  width: 30%;
+  text-align: right;
+  font-weight: 500; 
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .info-user-container {
+    width: 33rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .info-user-container {
+    width: 33rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .info-user-container {
+    width: 100%;
+  }
+}

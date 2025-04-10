@@ -253,12 +253,6 @@
   border-color: #2BB34B  ;
 }
 
-
-
-
-
-
-
 .currency-symbol {
   margin-right: 5px;
   font-weight: bold;
@@ -275,58 +269,48 @@
   width: 100%;
 }
 
-
-
-.step-3-container {
+.table-container {
   width: 100%;
+  overflow-x: auto;
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.input-box {
   padding: 10px;
+  border: 1px solid #ccc;
 }
 
-.step-3-item {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.step-3-item label {
+.box-label {
+  font-size: 14px;
+  color: #333;
   display: block;
   margin-bottom: 5px;
-  font-weight: normal;
-  width: 90%;
-  text-align: justify;
+  font-weight: 600;
+  height: 40px;
 }
 
-.step-3-item.indented {
-  padding-left: 20px; 
-}
-
-
-
-
-.step-4-container {
+.acordeon-input-table {
   width: 100%;
   padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
 }
 
-.step-4-item {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 20px;
+.or-text {
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
 }
 
-.step-4-item label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: normal;
-  width: 90%;
-  text-align: justify;
-}
+
 
 @media (max-width: 768px) {
   .step1-inputs {
@@ -335,35 +319,36 @@
   .step1-checkbox-container .checkbox-group {
     flex-direction: column;
   }
-
-  .step-3-item label {
-    width: 100%;
-  }
-  .step-3-item {
-    flex-direction: column;
-    gap: 0px;
-  }
-  .step-3-item.indented {
-    padding-left: 10px; 
-  }
-  .step-3-item.indented {
-    padding-left: 0px; 
-  }
-  
-  .step-4-item label {
-    width: 100%;
-  }
-  .step-4-item {
-    flex-direction: column;
-    gap: 0px;
-  }
   .input-container {
     width: 100%;
   }
-
   .acordeon-titulo {
     font-size: 14px;
 
+  }
+
+  .input-box,
+  .or-text {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  .input-box {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .box-label{
+    height: 20px;
+  }
+  .box-label,
+  .acordeon-input-table {
+    width: 95%;
+  }
+
+  .or-text {
+    text-align: center;
+    padding: 5px 0;
   }
   
 }

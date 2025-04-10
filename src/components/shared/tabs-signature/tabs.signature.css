@@ -118,14 +118,6 @@
   border-radius: 5px;
 }
 
-.button-group {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  width: 100%;
-  padding-bottom: 20px;
-  margin-top: 30px;
-}
 .button {
   background-color: white;
   color: #4285F4;
@@ -226,7 +218,7 @@
   text-align: center;
 }
 
-.signature-options .button-group {
+.signature-options  {
   display: flex;
   justify-content: space-between;
   gap: 15px;

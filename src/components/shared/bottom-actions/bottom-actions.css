@@ -1,0 +1,63 @@
+
+
+.bottom-actions-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 45%;
+  cursor: pointer;
+}
+
+
+.bottom-actions-container {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  z-index: 99;
+}
+
+@media only screen and (min-width: 1024px) {
+  .bottom-actions-button {
+    background-color: white;
+    color: #4285F4;
+    padding: none; 
+    border: none;
+    border-radius: 0.3125rem; 
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .bottom-actions-button {
+    background-color: white;
+    color: #4285F4;
+    padding: none; 
+    border: none;
+    border-radius: 0.3125rem; 
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+}
+
+@media (max-width: 575.98px) {
+  .bottom-actions-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    z-index: 99;
+  }
+}

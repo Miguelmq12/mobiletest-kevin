@@ -1,4 +1,15 @@
-
+.container_generic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #4472C4;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
 
 .input-table {
   width: 100%;
@@ -32,7 +43,6 @@
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-
 
 .message {
   font-size: 1.2em;
@@ -218,7 +228,7 @@
   text-align: center;
 }
 
-.signature-options .button-group {
+.signature-options {
   display: flex;
   justify-content: space-between;
   gap: 15px;
@@ -291,11 +301,9 @@
   background-color: #3367D6;
 }
 
-
-
 .upload-container {
   margin-bottom: 30px;
-  width: 500px;
+  max-width: 500px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -330,7 +338,6 @@
   border-radius: 8px;
   margin: 10px;
   background-color: white;
-  
 }
 
 .upload-icon {
@@ -345,73 +352,8 @@
 
 
 
-
-.floating-icon-anim{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.canvas-container {
-  position: relative;
-}
-
-.floating-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  pointer-events: none;  /* Evita que el ícono interfiera con los eventos de clic/touch */
-}
-
-
-
-.floating-icon svg {
-  font-size: 60px;  /* Tamaño del icono */
-  animation: bounce 1s infinite;
-}
-
-.floating-icon p {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #000;
-  font-weight: bold;
-}
-
-@keyframes floatIcon {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  50% {
-    transform: translate(-50%, -60%) rotate(10deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-
-
-
-
 @media (max-width: 576px) {
-  .upload-container{
+  .upload-container {
     width: 95%;
   }
   .message {

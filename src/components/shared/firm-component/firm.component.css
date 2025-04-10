@@ -1,40 +1,78 @@
+#divimgCon {
+  width: 33rem;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #signatureDiv {
-  width: 100%;
   cursor: pointer;
   padding: 10px;
-  border: 2px solid #787878;
+  border: 2px solid #4472C4;
   background-color: white;
   text-align: center;
   transition: background-color 0.3s ease;
-  height: 70px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  }
-  
-  #signatureDiv:hover {
-    background-color: #f0f0f0;
-  }
-  
-  #signatureText {
-    font-size: 16px;
-    color:#787878;
-  }
-  
-  #signatureImage {
-    max-width: 280px;
-    max-height: 150px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: white;
-  }
+  width: 100%;
+}
+
+#signatureDiv:hover {
+  background-color: #f0f0f0;
+}
+
+#signatureText {
+  font-size: 0.8rem;
+  color: #4472C4;
+}
+
+#signatureImage {
+  max-width: 350px;
+  max-height: 150px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+@media (max-width: 575.98px) {
   #divimgCon {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.6rem;
+    border: solid 1px red;
   }
-  
-  
+}
+
+@media (min-width: 576px) {
+  #divimgCon {
+    width: 33rem; 
+    border: solid 1px black;
+  }
+}
+
+@media (min-width: 768px) {
+  #divimgCon {
+    width: 33rem;
+    border: solid 1px green;
+  }
+}
+
+@media (min-width: 992px) {
+  #divimgCon {
+    width: 33rem;
+    border: solid 1px blue;
+  }
+}
+
+@media (min-width: 1200px) {
+  #divimgCon {
+    width: 33rem; 
+    border: solid 1px yellow;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  #divimgCon {
+    width: 33rem; 
+    border: solid 1px orange;
+  }
+}

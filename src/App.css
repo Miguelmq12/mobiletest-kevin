@@ -7,9 +7,6 @@
   pointer-events: none;
 }
 
-.divContextBox{
-  padding: 0.6rem;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
