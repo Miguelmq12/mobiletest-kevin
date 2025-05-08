@@ -365,13 +365,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  pointer-events: none;  /* Evita que el ícono interfiera con los eventos de clic/touch */
+  pointer-events: none;  
 }
 
 
 
 .floating-icon svg {
-  font-size: 60px;  /* Tamaño del icono */
+  font-size: 60px; 
   animation: bounce 1s infinite;
 }
 
@@ -441,3 +441,57 @@
 
 }
 
+
+
+
+
+
+.ds-content-box {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: start;
+  overflow: none;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 575.98px) {
+  .ds-content-box {
+    height: 30vh;
+  }  
+}
+
+@media (min-width: 576px) {
+  .ds-content-box {
+    height: 55vh;
+  }  
+}
+
+@media (min-width: 768px) {
+  .ds-content-box {
+    height: 30vh;
+  }  
+}
+
+@media (min-width: 992px) {
+  .ds-content-box {
+    height: 40vh;
+  }  
+}
+
+@media (min-width: 1200px) {
+  .ds-content-box {
+    height: 55vh;
+  }  
+}
+
+
+@media (min-width: 1400px) {
+  .ds-content-box {
+    height: 40vh;
+  }  
+}

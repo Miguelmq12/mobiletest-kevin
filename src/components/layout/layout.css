@@ -1,4 +1,29 @@
-  .login-logo-topbar {
+.layout-container {
+  display: flex;
+  flex-direction: column; 
+  height: 100vh; 
+}
+
+.layout-topbar {
+  flex-shrink: 0;
+  height: 10%; 
+}
+
+.layout-body {
+  flex-grow: 1; 
+  overflow-y: auto; 
+}
+
+.layout-bottom-actions {
+  flex-shrink: 0; 
+  height: 15%;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+ 
+ 
+ .login-logo-topbar {
     max-width: 100px;
   }
   .login-logo-topbar-icon {
@@ -6,6 +31,13 @@
   }
   .title-phone {
     font-size: 1.4em;
+  }
+  .button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
   }
   @media (max-width: 576px) {
     .login-logo-topbar {

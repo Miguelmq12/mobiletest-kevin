@@ -7,6 +7,7 @@ import SignatureTabs from '../shared/tabs-signature/tabs-signature';
 import getHtmlContent from '../../template-html/html-content';
 import FirmComponent from '../shared/firm-component/firm.component';
 import InfoUser from '../shared/infor-user/info-user';
+import Layout from '../layout/layout';
 
 
 
@@ -37,12 +38,12 @@ const SignatureV2: React.FC = () => {
   const handleTabChange = (tabId: number) => {
     setIdTipoFirma(tabId);
   };
-  
+
   const handleSignatureChange = (signatureData: string) => {
     setValorFirma(signatureData);
   };
 
-  const handleSaveSignature = () => {
+  const handleSubmit = () => {
     // if (idTask === '10') {
     //   if (idTipoFirma && valorFirma) {
     //     localStorage.setItem('idTipoFirma', idTipoFirma.toString());
@@ -61,42 +62,31 @@ const SignatureV2: React.FC = () => {
     // }
   };
 
-  const handleSave= (): void => {
+  const handleSave = (): void => {
 
   };
 
 
-  const handleClear = (): void => {
-    localStorage.setItem('idTask','0');
-    localStorage.setItem('tittleTemp','');
+  const handleExit = (): void => {
+    localStorage.setItem('idTask', '0');
+    localStorage.setItem('tittleTemp', '');
     navigate('/progress-checklist');
   };
 
   return (
-    <div className="container-generic" style={{ marginBottom: '70px' }}>
-      <h1 className="title">{tittle}</h1>
-      <div className="divContextBox">
-        <ContentBox content={getContentBoxContent()} />
+    <Layout title="" onExit={handleExit} onSubmit={handleSubmit}>
+      <div className="container-generic" style={{ marginBottom: '70px' }}>
+        <h1 className="title">{tittle}</h1>
+        <div className="divContextBox">
+          <ContentBox content={getContentBoxContent()} />
+        </div>
+
+        <FirmComponent />
+
+        <InfoUser name="Stephen Jones" date="11/21/2024" />
       </div>
+    </Layout>
 
-      {/* <SignatureTabs
-        idTask={idTask!}
-        idTipoFirma={idTipoFirma}
-        valorFirma={valorFirma}
-        onTabChange={handleTabChange}
-        onSignatureChange={handleSignatureChange}
-      /> */}
-
-      <FirmComponent/>
-
-      <InfoUser name="Stephen Jones" date="11/21/2024" />
-
-      <div className="button-group">
-        <BottomActions onExit={handleClear} onSubmit={handleSave} />
-      </div>
-
-      
-    </div>
   );
 };
 

@@ -37,35 +37,30 @@
 @media (max-width: 575.98px) {
   #divimgCon {
     width: 100%;
-    border: solid 1px red;
   }
 }
 
 @media (min-width: 576px) {
   #divimgCon {
     width: 33rem; 
-    border: solid 1px black;
   }
 }
 
 @media (min-width: 768px) {
   #divimgCon {
     width: 33rem;
-    border: solid 1px green;
   }
 }
 
 @media (min-width: 992px) {
   #divimgCon {
     width: 33rem;
-    border: solid 1px blue;
   }
 }
 
 @media (min-width: 1200px) {
   #divimgCon {
     width: 33rem; 
-    border: solid 1px yellow;
   }
 }
 
@@ -73,6 +68,5 @@
 @media (min-width: 1400px) {
   #divimgCon {
     width: 33rem; 
-    border: solid 1px orange;
   }
 }

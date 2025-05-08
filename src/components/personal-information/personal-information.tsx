@@ -12,6 +12,7 @@ import Compress from 'compress.js';
 import { useNavigate } from 'react-router-dom';
 import Capture from '../capture/capture';
 import BottomActions from '../shared/bottom-actions/bottom-actions';
+import Layout from '../layout/layout';
 
 const PersonalInformation = () => {
   const navigate = useNavigate();
@@ -158,7 +159,9 @@ const PersonalInformation = () => {
   };
 
   return (
-    <div className={styles.container_generic} style={{marginBottom: showCamera ? '0px' : '70px', }} >
+
+    <Layout title="Personal Information" onExit={handleExit} onSubmit={handleSubmit}>
+       <div className={styles.container_generic} style={{marginBottom: showCamera ? '0px' : '70px', }} >
       <>
         {showCamera ? (
           <Capture onCapture={handleCapture} onClose={handleCloseCamera} />
@@ -197,7 +200,7 @@ const PersonalInformation = () => {
             </div>
 
             <div className='separationLine'></div>
-<br></br>
+            <br></br>
             <div className="upload-container">
               <div className="tab-header">
                 <button
@@ -257,7 +260,6 @@ const PersonalInformation = () => {
                         }}
                       />
                     ) : (
-                      // Si no hay imagen capturada, mostramos la opción de tomar una foto
                       <>
                         <div className="upload-icon">
                           <FaCamera
@@ -283,21 +285,13 @@ const PersonalInformation = () => {
               />
             </div>
 
-            {/* <div className="button-group">
-              <button className="button" onClick={handleExit}>
-                Exit
-              </button>
-              <button className="button" onClick={handleSubmit}>
-                Submit
-              </button>
-            </div> */}
-            <div className="button-group">
-              <BottomActions onExit={handleExit} onSubmit={handleSubmit} />
-            </div>
           </>
         )}
       </>
     </div>
+    </Layout>
+  
+
   );
 };
 

@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import { FaHandPointer, FaPen, FaRegEdit, FaSignature } from 'react-icons/fa';  // Ícono de un dedo apuntando
 import BottomActions from '../shared/bottom-actions/bottom-actions';
 import ContentBox from '../shared/content-box/content-box';
+import Layout from '../layout/layout';
 
 type SignatureType = 'draw' | 'type';
 
@@ -107,17 +108,17 @@ const Signature: React.FC = () => {
     setDrawing(false);
   };
 
-  const handleClear = (): void => {
+  const handleExit = (): void => {
     navigate('/progress-checklist');
   };
 
-  const handleSaveSignature = (): void => {
+  const handleSubmit = (): void => {
     if (signatureType === 'draw') {
       const canvas = canvasRef.current;
       if (canvas) {
         const signatureData = canvas.toDataURL('image/png');
         console.log('Signature data (base64):', signatureData);
-        localStorage.setItem("base64test",signatureData);
+        localStorage.setItem("base64test", signatureData);
       }
     } else if (signatureType === 'type') {
       const canvas = document.createElement('canvas');
@@ -129,7 +130,7 @@ const Signature: React.FC = () => {
         ctx.fillText(fullName, 0, 50);
         const signatureData = canvas.toDataURL('image/png');
         console.log('Typed Signature data (base64):', signatureData);
-        localStorage.setItem("base64test",signatureData);
+        localStorage.setItem("base64test", signatureData);
       }
     }
   };
@@ -142,12 +143,12 @@ const Signature: React.FC = () => {
   };
 
   return (
-    <div className="container-generic" style={{ marginBottom: '70px' }}>
-      <h1 className="title">Digital Signature</h1>
+    <Layout title="Digital Signature" onExit={handleExit} onSubmit={handleSubmit}>
+      <div className="container-generic" style={{ marginBottom: '70px' }}>
+        <h1 className="title">Digital Signature</h1>
 
-      <div className='divContextBox'  >
-        <ContentBox content={
-          <>
+        <div className='divContextBox'  >
+          <div className="ds-content-box">
             <p>
               By signing below, I voluntarily agree to use a digital signature to complete my new hire paperwork online. I understand that my digital signature will be legally binding and have the same validity as a handwritten signature.
             </p>
@@ -159,95 +160,91 @@ const Signature: React.FC = () => {
               <li>The company will take steps to protect my information.</li>
               <li>I can withdraw my consent at any time, but it may delay the hiring process.</li>
             </ul>
-          </>
-        } />
-      </div>
-
-
-      <div className="upload-container">
-        <div className="tab-header">
-          <button
-            className={`tab ${activeTab2 === 'draw' ? 'active' : ''}`}
-            onClick={() => handleTabClick('draw')}
-          >
-            Draw Signature
-          </button>
-          <button
-            className={`tab ${activeTab2 === 'type' ? 'active' : ''}`}
-            onClick={() => handleTabClick('type')}
-          >
-            Type Full Name
-          </button>
+          </div>
         </div>
 
 
-        <div className="upload-box">
-          {activeTab2 === 'type' ? (
-            <>
-              <input
-                type="text"
-                value={fullName}
-                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                  setFullName(e.target.value)
-                }
-                placeholder="Enter your full name"
-                autoComplete="off"
-                style={{ padding: '5px', fontSize: '1em' }}
-              />
-              <div
-                style={{
-                  fontFamily: font,
-                  fontSize: '35px',
-                  marginTop: '20px',
-                  color: '#000',
-                }}
-              >
-                {fullName}
-              </div>
-            </>
-          ) : (
-            <div className="canvas-container" style={{ position: 'relative' }}>
-              {showFloatingIcon && (
-                <div className="floating-icon" style={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%)',
-                  textAlign: 'center',
-                }}>
-                  <div className="floating-icon-anim">
-                    <FaSignature size={60} color="#000" />
-                    <FaHandPointer size={60} color="#3367D6" />
-                  </div>
-                  <p>Tap here to draw your signature</p>
+        <div className="upload-container">
+          <div className="tab-header">
+            <button
+              className={`tab ${activeTab2 === 'draw' ? 'active' : ''}`}
+              onClick={() => handleTabClick('draw')}
+            >
+              Draw Signature
+            </button>
+            <button
+              className={`tab ${activeTab2 === 'type' ? 'active' : ''}`}
+              onClick={() => handleTabClick('type')}
+            >
+              Type Full Name
+            </button>
+          </div>
+
+
+          <div className="upload-box">
+            {activeTab2 === 'type' ? (
+              <>
+                <input
+                  type="text"
+                  value={fullName}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    setFullName(e.target.value)
+                  }
+                  placeholder="Enter your full name"
+                  autoComplete="off"
+                  style={{ padding: '5px', fontSize: '1em' }}
+                />
+                <div
+                  style={{
+                    fontFamily: font,
+                    fontSize: '35px',
+                    marginTop: '20px',
+                    color: '#000',
+                  }}
+                >
+                  {fullName}
                 </div>
-              )}
-              <canvas
-                ref={canvasRef}
-                width={800}
-                height={300}
-                style={{
-                  border: '1px solid white',
-                  marginTop: '20px',
-                  touchAction: 'none',
-                }}
-                onMouseDown={handleMouseDown}
-                onMouseMove={handleMouseMove}
-                onMouseUp={handleMouseUp}
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}
-              />
-            </div>
-          )}
+              </>
+            ) : (
+              <div className="canvas-container" style={{ position: 'relative' }}>
+                {showFloatingIcon && (
+                  <div className="floating-icon" style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    textAlign: 'center',
+                  }}>
+                    <div className="floating-icon-anim">
+                      <FaSignature size={60} color="#000" />
+                      <FaHandPointer size={60} color="#3367D6" />
+                    </div>
+                    <p>Tap here to draw your signature</p>
+                  </div>
+                )}
+                <canvas
+                  ref={canvasRef}
+                  width={800}
+                  height={300}
+                  style={{
+                    border: '1px solid white',
+                    marginTop: '20px',
+                    touchAction: 'none',
+                  }}
+                  onMouseDown={handleMouseDown}
+                  onMouseMove={handleMouseMove}
+                  onMouseUp={handleMouseUp}
+                  onTouchStart={handleTouchStart}
+                  onTouchMove={handleTouchMove}
+                  onTouchEnd={handleTouchEnd}
+                />
+              </div>
+            )}
+          </div>
         </div>
       </div>
+    </Layout>
 
-      <div className="button-group">
-        <BottomActions onExit={handleClear} onSubmit={handleSaveSignature} />
-      </div>
-
-    </div>
   );
 };
 

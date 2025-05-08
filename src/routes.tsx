@@ -37,20 +37,20 @@ const RoutesComponent = () => {
       />
       <Route
         path="/progress-checklist"
-        element={isAuthenticated ?  <Layout title="New Hire Checklist"><LandingPage /></Layout> : <Navigate to="/" />}
+        element={isAuthenticated ?  <LandingPage />: <Navigate to="/" />}
       />
       <Route
         path="/personal-information"
-        element={isAuthenticated ? <Layout title="Personal Information"><PersonalInformation /></Layout> : <Navigate to="/" />}
+        element={isAuthenticated ? <PersonalInformation /> : <Navigate to="/" />}
       />
       <Route
         path="/digital-signature"
-        element={isAuthenticated ? <Layout title="Digital Signature"><Signature/></Layout> :<Navigate to="/" />}
+        element={isAuthenticated ? <Signature/> :<Navigate to="/" />}
       />
 
       <Route
         path="/confirm"
-        element={isAuthenticated ? <Layout title=''><ConfirmText/></Layout> :<Navigate to="/" />}
+        element={isAuthenticated ? <ConfirmText/> :<Navigate to="/" />}
       />
       <Route
         path="/token-validation-error"
@@ -58,12 +58,12 @@ const RoutesComponent = () => {
       />
       <Route
         path="/w4-withholding"
-        element={isAuthenticated ? <Layout title="W-4 Withholding"><WithHolding/></Layout> :<Navigate to="/" />}
+        element={isAuthenticated ?<WithHolding/>:<Navigate to="/" />}
       />
 
       <Route
         path="/i9"
-        element={isAuthenticated ? <Layout title="I-9 Employment Eligibility"><I9/></Layout> :<Navigate to="/" />}
+        element={isAuthenticated ? <I9/>:<Navigate to="/" />}
       />
     </Routes>
   );

@@ -3,6 +3,7 @@ import './withholding.css';
 import { useNavigate } from 'react-router-dom';
 import BottomActions from '../shared/bottom-actions/bottom-actions';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import Layout from '../layout/layout';
 
 const WithHolding: React.FC = () => {
   const [pasoActivo, setPasoActivo] = useState<number | null>(0);
@@ -229,17 +230,17 @@ const WithHolding: React.FC = () => {
     setPasoActivo(pasoActivo === index ? null : index);
   };
 
-  const handleClear = (): void => {
+  const handleExit = (): void => {
     navigate('/progress-checklist');
   };
 
-  const handleSaveSignature = (): void => {
+  const handleSubmit = (): void => {
   };
 
   return (
-    <div className="container-generic" style={{ marginBottom: '70px' }}>
+    <Layout title="W-4 Withholding" onExit={handleExit} onSubmit={handleSubmit}>
+          <div className="container-generic" style={{ marginBottom: '70px' }}>
       <h1 className="title">W-4 Withholding</h1>
-
       <div className="acordeon-contenedor">
         {pasos.map((paso, index) => (
           <div key={index} className="acordeon-paso">
@@ -268,10 +269,9 @@ const WithHolding: React.FC = () => {
         ))}
       </div>
 
-      <div className="button-group">
-        <BottomActions onExit={handleClear} onSubmit={handleSaveSignature} />
-      </div>
     </div>
+    </Layout>
+
   );
 };
 
