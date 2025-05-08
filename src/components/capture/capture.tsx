@@ -79,7 +79,7 @@ const Capture: React.FC<CaptureProps> = ({ onCapture, onClose }) => {
       ref={webcamRef}
       screenshotFormat="image/jpeg"
       width="100%"
-      videoConstraints={{ facingMode: "user" }}
+      videoConstraints={{ facingMode: facingMode }}
     />
     <div className="button-group">
       <button className="button" onClick={capture}>Capturar Imagen</button>
